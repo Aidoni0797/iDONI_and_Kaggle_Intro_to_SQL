@@ -1,0 +1,13 @@
+HTTP/2-exclusive vectors
+
+Due to the fact thaHTTP/2 is a binary protocol rather than text-based, there are a number of potential vectors that are
+impossible to construct in HTTP/1 due to the limitations of its syntax.
+
+We've already seen how you can inject CRLF sequences into a header value. In this section, we'll give you an idea of some
+of the other HTTP/2-exclusive vectors you can use to inject payloads. Although these kinds of requests are officially
+prohibited by the HTTP/2 specification, some servers fail to validate and block them effectively.
+
+Note
+It's only possible to perform these attacks using the specialized HTTP/2 feautures in Burp's Inspector panel.
+
+Injecting via header
